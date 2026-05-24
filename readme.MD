@@ -38,7 +38,7 @@ Then run:
 In the project root, create a file named .env with these three variables:
 
   OPENROUTER_API_KEY=your_openrouter_api_key_here
-  MODEL_NAME=openai/gpt-4o
+  MODEL_NAME=nvidia/nemotron-3-nano-30b-a3b:freeopenai/gpt-4o
   API_URL=https://openrouter.ai/api/v1/chat/completions
 
 Replace the values with your actual API key and preferred model.
