@@ -1,0 +1,9 @@
+name: llm_cli
+description: A simple LLM CLI chat app using OpenRouter.
+version: 1.0.0
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.2.0
