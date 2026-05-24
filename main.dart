@@ -50,6 +50,13 @@ Future<String> callLlmApi(String prompt) async {
 
   final response = await http.post(url, headers: headers, body: body);
 
+  final contentType = response.headers['content-type'] ?? '';
+  if (!contentType.contains('application/json')) {
+    throw Exception(
+      'Expected JSON but got $contentType. Body: ${response.body.substring(0, 200)}',
+    );
+  }
+
   if (response.statusCode == 200) {
     final data = jsonDecode(response.body);
     return data['choices'][0]['message']['content'];
