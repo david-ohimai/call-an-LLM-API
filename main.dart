@@ -36,7 +36,7 @@ Future<String> callLlmApi(String prompt) async {
     );
   }
 
-  final url = Uri.parse(apiUrl);
+  final url = Uri.parse('$apiUrl/chat/completions');
   final headers = {
     'Authorization': 'Bearer $apiKey',
     'Content-Type': 'application/json',
